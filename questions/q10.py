@@ -1,5 +1,11 @@
 """Question 10: broad-crested weir and downstream hydraulic jump."""
 
+if __package__ is None or __package__ == "":
+    import sys
+    from pathlib import Path
+
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
 from open_channel import (
     broad_crested_weir_head,
     critical_depth,
@@ -43,4 +49,3 @@ def solve() -> dict[str, float]:
 if __name__ == "__main__":
     for name, value in solve().items():
         print(f"{name}: {value:.6f} m")
-

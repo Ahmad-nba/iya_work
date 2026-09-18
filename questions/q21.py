@@ -1,5 +1,11 @@
 """Question 21: sluice flow, normal depth, and force on hydraulic-jump blocks."""
 
+if __package__ is None or __package__ == "":
+    import sys
+    from pathlib import Path
+
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
 from open_channel import (
     RectangularSection,
     normal_depth,
